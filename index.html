@@ -1,1 +1,148 @@
+<!DOCTYPE html>
+<html lang="uk">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>registration-form</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <form action="/register" method="post" autocomplete="on">
+        <fieldset>
+            <legend>Особисті дані</legend>
+            <label for="firstName">Ім'я</label>
+            <input 
+                 type="text" 
+                 id="firstName" 
+                 name="firstName" 
+                 placeholder="Введіть ім'я" 
+                 autocomplete="given-name"
+                 required>
+            <label for="lastName">Прізвище</label>
+            <input 
+                 type="text" 
+                 id="lastName" 
+                 name="lastName" 
+                 placeholder="Введіть прізвище" 
+                 autocomplete="family-name"
+                 required>
+            <label for="age">Вік</label>
+            <input 
+                 type="number" 
+                 id="age" 
+                 name="age" 
+                 min="1" 
+                 max="120" 
+                 required>
+            <div class="radio-group">
+                <p>Стать</p>
+                <div>
+                    <input 
+                        type="radio" 
+                        id="male" 
+                        name="gender" 
+                        value="male" 
+                        required>
+                    <label for="male">Чоловік</label>
+                    <input 
+                        type="radio" 
+                        id="female" 
+                        name="gender" 
+                        value="female">
+                    <label for="female">Жінка</label>
+                </div>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Контактні дані</legend>
+            <label for="phone">Телефон</label>
+            <input 
+                type="tel" 
+                id="phone" 
+                name="phone"
+                placeholder="+38 (067) 123-45-67"
+                autocomplete="tel"
+                required>
+            <label for="email">Email</label>
+            <input 
+                type="email" 
+                id="email" 
+                name="email" 
+                placeholder="Введіть email"
+                autocomplete="email"
+                required>
+        </fieldset>
+        <fieldset>
+            <legend>Адреса</legend>
+            <label for="region">Область</label>
+            <select 
+                id="region"
+                name="region"
+                required
+            >
+            <option value="">Оберіть область</option>
+            <option value="kirovohrad">
+                Кіровоградська
+            </option>
+            <option value="kyiv">
+                Київська
+            </option>
+            <option value="lviv">
+                Львівська
+            </option>
+            <option value="odesa">
+                Одеська
+            </option>
+            </select>
+            <label for="district">Район</label>
+            <select 
+                id="district" 
+                name="district" required>
+                <option value="">Оберіть район</option>
+                <option value="kropyvnytskyi">
+                    Кропивницький
+                </option>
+                <option value="oleksandriiskyi">
+                    Олександрійський
+                </option>
+                <option value="novoukrainskyi">
+                    Новоукраїнський
+                </option>
+                <option value="holovanivskyi">
+                    Голованівський
+                </option>
+            </select>
+            <label for="city">Місто</label>
+            <select 
+                id="city" 
+                name="city" 
+                required>
+                <option value="">Оберіть місто</option>
+                <option value="kropyvnytskyi">
+                    Кропивницький
+                </option>
+                <option value="oleksandriia">
+                    Олександрія
+                </option>
+                <option value="novoukrainka">
+                    Новоукраїнка
+                </option>
+                <option value="holovanivsk">
+                    Голованівськ
+                </option>
+            </select>
+        </fieldset>
+        <button type="reset">
+            Очистити
+        </button>
+    
+        <button type="submit">
+            Зареєструватися
+        </button>
+    </form>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
